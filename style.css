@@ -1,0 +1,111 @@
+/*@import url ('https://fonts.googleapis.com/css2? family = Montserrat: wght @ 200; 400; 700; 900 & display = swap');*/
+
+* {
+	font-family: 'Montserrat', sans-serif;
+	color: #1e1e1e;
+/*	transition: all 1s ease 1s;*/
+	box-sizing: border-box;
+}
+
+.container {
+	margin: auto;
+	margin-bottom: 120px;
+	max-width: 1024px;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 1;
+	margin-bottom: 1em;
+}
+
+p,
+li {
+	font-size: 1.5rem;
+	line-height: 170%;
+
+	text-indent: 4rem;
+	text-align: justify;
+}
+
+p {
+	margin-top: 0;
+	margin-bottom: 2em;
+}
+
+.btn--start {
+	display: block;
+	margin: auto;
+	padding: 0px 40px;
+	
+
+	line-height: 4rem;
+	
+	font-size: 1.5rem;
+	letter-spacing: 2px;
+	
+	background-color: #fcfcfc;
+	border: 0 solid #1e1e1e;
+	outline: none;
+	
+	cursor: pointer;
+}
+
+.fade--in {
+	
+	animation: showBlock 1s ease forwards;
+}
+
+
+@keyframes showBlock {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+
+.fade--out {
+	position: relative;
+	animation: hideBlock 1s ease forwards;
+}
+
+@keyframes hideBlock {
+	0% {
+		opacity: 1;
+	}
+	
+	100% {
+		opacity: 0;
+	}
+}
+
+
+#input {
+	display: block;
+	
+	font-size: 1.7rem;
+	letter-spacing: 14px;
+	text-align: center;
+	
+	padding: 10px 40px;
+	margin: 25px auto;
+	
+	box-sizing: content-box;
+   width: 113px;
+}
+
+input[disabled] {
+	background: white;
+}
+
+
+
+
+
+
+
+
