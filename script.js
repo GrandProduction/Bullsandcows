@@ -5,7 +5,7 @@ let gameBlock = document.getElementById("gameBlock");
 let userNumber = "";
 let randNumber = "";
 let step = 0;
-let stepMax = 3;
+let stepMax = 7;
 
 
 function createRandNum() {
