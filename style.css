@@ -33,6 +33,14 @@ p {
 	margin-bottom: 2em;
 }
 
+li {
+	letter-spacing: 5px;
+}
+
+li span {
+	letter-spacing: 0;
+}
+
 .btn--start {
 	display: block;
 	margin: auto;

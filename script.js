@@ -89,7 +89,7 @@ function checkForFourNumbers(num) {
 			if (num[i] === num[j])
 				return false;
 	}
-	
+
 	return true;
 }
 
@@ -109,8 +109,8 @@ function checkNumbers(num1, num2) {
 			}
 		}
 	}
-	
-	if (!bull && !cow) 
+
+	if (!bull && !cow)
 		return "Ничего!";
 
 	if (bull) {
@@ -136,13 +136,13 @@ function isEndGame(res) {
 	if (step === stepMax) {
 		alert("Вы проиграли");
 		return true;
-	} 
-	
+	}
+
 	if (res === "4 быка") {
 		alert("Вы выиграли");
 		return true;
-	} 
-	
+	}
+
 	return false;
 }
 
@@ -166,31 +166,34 @@ function documentListener(e) {
 			alert("Только четырёхзначные числа");
 			return;
 		}
-		
-		if (!checkForFourNumbers(userNumber)){
+
+		if (!checkForFourNumbers(userNumber)) {
 			alert("Цифры не должны повторятся");
 			return;
 		}
-		
-	 	let response = checkNumbers(randNumber, userNumber);
-		
+
+		let response = checkNumbers(randNumber, userNumber);
+
 		let list = document.querySelector("ol")
 		let newli;
 		setTimeout(() => {
 			newli = createElement("li", "fade--in");
 			newli.innerHTML = userNumber;
 			userNumber = "";
-			
+
 			let span = document.createElement("span");
 			span.innerHTML = response;
 			span.style.paddingLeft = "50px";
 			newli.appendChild(span);
-			
+
 			list.appendChild(newli);
 			slowDown(input, newli.scrollHeight, 500);
-			
-			step++;
-		
+
+		}, 500);
+
+		step++;
+
+		setTimeout(() => {
 			if (isEndGame(response)) {
 				if (confirm("Ещё разок?")) {
 					input.removeEventListener("click", documentListener);
@@ -198,7 +201,7 @@ function documentListener(e) {
 					return;
 				}
 			}
-		}, 500);
+		}, 1000);
 
 		input.value = "";
 	}
